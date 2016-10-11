@@ -28,17 +28,27 @@ class BookModel: NSObject {
         super.init()
     }
 
-    ///Returns the book image as a UIImage or a default image
+    ///Loads book image as a UIImage or a default image on the current thread
     func bookImage() -> UIImage? {
+        //TODO: cache results
         if let imageURL = self.imageURL {
-            //TODO: Load in background
             if let data = NSData(contentsOfURL: imageURL) {
-                //TODO: cache results
                 let image = UIImage(data: data)
                 return image
             }
         }
 
         return UIImage(named: "book")
+    }
+
+    func loadImage(completion: (image: UIImage?) -> Void) {
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)) {
+            let image = self.bookImage()
+
+            dispatch_async(dispatch_get_main_queue(), {
+                completion(image: image)
+            })
+        }
+
     }
 }

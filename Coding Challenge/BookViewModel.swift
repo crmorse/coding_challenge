@@ -11,17 +11,28 @@ import UIKit
 
 let kDataSourceURL = NSURL(string: "https://de-coding-test.s3.amazonaws.com/books.json")
 
+protocol BookViewModelDelegate {
+    func bookDataChanged()
+}
+
 class BookViewModel: NSObject {
 
     var data: [BookModel] = Array()
+    var delegate: BookViewModelDelegate?
 
     override init() {
         super.init()
 
-        //TODO: Move this to a proper API Client layer
-        //TODO: Move load call to async background thread
-        self.data = loadData(kDataSourceURL!)
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)) {
+            //TODO: Move this to a proper API Client layer
+            self.data = self.loadData(kDataSourceURL!)
 
+            if let delegate = self.delegate {
+                dispatch_async(dispatch_get_main_queue(), { 
+                    delegate.bookDataChanged()
+                })
+            }
+        }
     }
 
     /// Loads the JSON result of an API Call and parses it into an array of books

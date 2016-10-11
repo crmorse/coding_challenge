@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, BookViewModelDelegate {
 
     var detailViewController: DetailViewController? = nil
     var viewModel: BookViewModel!
@@ -17,6 +17,7 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
 
         viewModel = BookViewModel()
+        viewModel.delegate = self
 
         if let split = self.splitViewController {
             let controllers = split.viewControllers
@@ -32,6 +33,10 @@ class MasterViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    func bookDataChanged() {
+        self.tableView.reloadData()
     }
 
     // MARK: - Segues
