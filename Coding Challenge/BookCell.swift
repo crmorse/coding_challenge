@@ -15,8 +15,10 @@ class BookCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
 
-    func configure(Book: Book) {
-        bookImage.image = UIImage(data: <#T##NSData#>)
+    func configure(book: BookModel) {
+        bookImage.image = book.bookImage()
+        titleLabel.text = book.title
+        authorLabel.text = book.author
     }
 
 }

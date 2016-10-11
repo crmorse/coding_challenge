@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Book: NSObject {
+class BookModel: NSObject {
     let title: String?
     let author: String?
     let imageURL: NSURL?

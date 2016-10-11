@@ -13,8 +13,9 @@
 		23999A911DAD4ED7005C8A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23999A8F1DAD4ED7005C8A17 /* Main.storyboard */; };
 		23999A931DAD4ED7005C8A17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23999A921DAD4ED7005C8A17 /* Assets.xcassets */; };
 		23999A961DAD4ED7005C8A17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23999A941DAD4ED7005C8A17 /* LaunchScreen.storyboard */; };
-		23999A9E1DAD4F51005C8A17 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23999A9D1DAD4F51005C8A17 /* Book.swift */; };
+		23999A9E1DAD4F51005C8A17 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23999A9D1DAD4F51005C8A17 /* BookModel.swift */; };
 		23999AA21DAD533B005C8A17 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23999AA11DAD533B005C8A17 /* BookCell.swift */; };
+		23999AA51DAD5665005C8A17 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23999AA41DAD5665005C8A17 /* BookViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		23999A921DAD4ED7005C8A17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23999A951DAD4ED7005C8A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23999A971DAD4ED7005C8A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23999A9D1DAD4F51005C8A17 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		23999A9D1DAD4F51005C8A17 /* BookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		23999AA11DAD533B005C8A17 /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		23999AA41DAD5665005C8A17 /* BookViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				23999A891DAD4ED7005C8A17 /* AppDelegate.swift */,
 				23999A9F1DAD5221005C8A17 /* Models */,
 				23999AA31DAD5340005C8A17 /* Views */,
+				23999AA61DAD5677005C8A17 /* ViewModels */,
 				23999AA01DAD522D005C8A17 /* Controllers */,
 				23999A8F1DAD4ED7005C8A17 /* Main.storyboard */,
 				23999A921DAD4ED7005C8A17 /* Assets.xcassets */,
@@ -75,7 +78,7 @@
 		23999A9F1DAD5221005C8A17 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				23999A9D1DAD4F51005C8A17 /* Book.swift */,
+				23999A9D1DAD4F51005C8A17 /* BookModel.swift */,
 			);
 			name = Models;
 			path = ..;
@@ -96,6 +99,15 @@
 				23999AA11DAD533B005C8A17 /* BookCell.swift */,
 			);
 			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		23999AA61DAD5677005C8A17 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				23999AA41DAD5665005C8A17 /* BookViewModel.swift */,
+			);
+			name = ViewModels;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -170,11 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23999A9E1DAD4F51005C8A17 /* Book.swift in Sources */,
+				23999A9E1DAD4F51005C8A17 /* BookModel.swift in Sources */,
 				23999A8E1DAD4ED7005C8A17 /* DetailViewController.swift in Sources */,
 				23999A8C1DAD4ED7005C8A17 /* MasterViewController.swift in Sources */,
 				23999A8A1DAD4ED7005C8A17 /* AppDelegate.swift in Sources */,
 				23999AA21DAD533B005C8A17 /* BookCell.swift in Sources */,
+				23999AA51DAD5665005C8A17 /* BookViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
