@@ -11,4 +11,12 @@ import UIKit
 
 class BookCell: UITableViewCell {
 
+    @IBOutlet weak var bookImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+
+    func configure(Book: Book) {
+        bookImage.image = UIImage(data: <#T##NSData#>)
+    }
+
 }

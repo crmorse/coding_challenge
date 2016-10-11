@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Book: NSObject {
     let title: String?
@@ -25,6 +26,20 @@ class Book: NSObject {
         }
 
         super.init()
-   }
+    }
 
+    ///Returns the book image as a UIImage or a default image
+    func bookImage() -> UIImage? {
+        if let imageURL = self.imageURL {
+            //TODO: Load in background
+            if let data = NSData(contentsOfURL: imageURL) {
+                //TODO: cache results
+                let image = UIImage(data: data)
+                return image
+            }
+        }
+
+        //TODO: Return default image instead
+        return nil
+    }
 }
