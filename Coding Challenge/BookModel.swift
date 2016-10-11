@@ -14,7 +14,7 @@ class BookModel: NSObject {
     let author: String?
     let imageURL: NSURL?
 
-    init(dictionary:[String:AnyObject]) {
+    init(dictionary: Dictionary<String,AnyObject>) {
         self.title = dictionary["title"] as? String
         self.author = dictionary["author"] as? String
 
