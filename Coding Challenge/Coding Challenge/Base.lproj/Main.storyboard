@@ -76,48 +76,56 @@
         <scene sceneID="smW-Zh-WAh">
             <objects>
                 <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterViewController" customModule="Coding_Challenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="r7i-6Z-zg0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BookCell" rowHeight="60" id="WCw-Qf-5nD" customClass="BookCell" customModule="Coding_Challenge">
-                                <rect key="frame" x="0.0" y="86" width="600" height="60"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BookCell" rowHeight="70" id="WCw-Qf-5nD" customClass="BookCell" customModule="Coding_Challenge">
+                                <rect key="frame" x="0.0" y="86" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WCw-Qf-5nD" id="37f-cq-3Eg">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wva-eX-x0f">
-                                            <rect key="frame" x="8" y="8" width="45" height="44"/>
+                                            <rect key="frame" x="8" y="8" width="45" height="53.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="45" id="UiE-VQ-kSI"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgn-J8-ikD">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bgn-J8-ikD">
                                             <rect key="frame" x="66" y="8" width="42" height="20"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJ6-SV-uuW">
-                                            <rect key="frame" x="66" y="34" width="36" height="17"/>
+                                            <rect key="frame" x="66" y="46" width="36" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="mro-Tt-nPi"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="dJ6-SV-uuW" firstAttribute="leading" secondItem="Bgn-J8-ikD" secondAttribute="leading" id="9m1-pg-CqM"/>
+                                        <constraint firstItem="dJ6-SV-uuW" firstAttribute="bottom" secondItem="Wva-eX-x0f" secondAttribute="bottom" id="1Pl-pn-9Ut"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="Wva-eX-x0f" secondAttribute="leading" id="FyT-4x-klS"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Wva-eX-x0f" secondAttribute="bottom" id="HbR-So-g4C"/>
+                                        <constraint firstItem="dJ6-SV-uuW" firstAttribute="leading" secondItem="Bgn-J8-ikD" secondAttribute="leading" id="KF4-M6-DUP"/>
+                                        <constraint firstItem="dJ6-SV-uuW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Bgn-J8-ikD" secondAttribute="bottom" constant="4" id="Tq2-mb-auD"/>
+                                        <constraint firstItem="dJ6-SV-uuW" firstAttribute="bottom" secondItem="Wva-eX-x0f" secondAttribute="bottom" id="U3c-6u-qzd"/>
                                         <constraint firstItem="Bgn-J8-ikD" firstAttribute="leading" secondItem="Wva-eX-x0f" secondAttribute="trailing" constant="13" id="bDP-1l-A7y"/>
                                         <constraint firstItem="Bgn-J8-ikD" firstAttribute="top" secondItem="Wva-eX-x0f" secondAttribute="top" id="l7e-yp-sXo"/>
                                         <constraint firstAttribute="topMargin" secondItem="Wva-eX-x0f" secondAttribute="top" id="nr2-d9-Py2"/>
-                                        <constraint firstItem="dJ6-SV-uuW" firstAttribute="top" secondItem="Bgn-J8-ikD" secondAttribute="bottom" constant="6" id="vMS-Ia-Qea"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Bgn-J8-ikD" secondAttribute="trailing" constant="41" id="phi-Bi-1pI"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="authorLabel" destination="dJ6-SV-uuW" id="39L-LA-Gbq"/>
                                     <outlet property="bookImage" destination="Wva-eX-x0f" id="obz-dS-7pL"/>
