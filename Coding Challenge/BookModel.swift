@@ -39,7 +39,6 @@ class BookModel: NSObject {
             }
         }
 
-        //TODO: Return default image instead
-        return nil
+        return UIImage(named: "book")
     }
 }
